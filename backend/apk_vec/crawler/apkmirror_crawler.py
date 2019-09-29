@@ -40,7 +40,7 @@ def RandomSamplingApkCrawler(BaseCrawler):
             if success_num >= self._SAMPLING_NUM:
                 break
 
-            time.sleep(np.random.rand(3))
+            time.sleep(3.0*np.random.rand())
 
     def _get_random_id(self):
         return np.random.randint(1000, 5000000)
