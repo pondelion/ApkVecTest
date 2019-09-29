@@ -1,4 +1,5 @@
-import numpu as np
+import time
+import numpy as np
 import requests
 from .base_crawler import BaseCrawler
 
@@ -38,6 +39,8 @@ def RandomSamplingApkCrawler(BaseCrawler):
 
             if success_num >= self._SAMPLING_NUM:
                 break
+
+            time.sleep(np.random.rand(3))
 
     def _get_random_id(self):
         return np.random.randint(1000, 5000000)
